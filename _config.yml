@@ -1,8 +1,8 @@
 title: jongsoobae's blog
 description: () => ()
 
-url: http://jongsoobae.github.io/blog
-baseurl: ""
+url: http://jongsoobae.github.io/
+baseurl: "blog"
 paginate_path: "blog/page:num/"
 permalink: blog/:title/
 
