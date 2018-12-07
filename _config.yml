@@ -16,13 +16,10 @@ navigation:
    url: /index.html
  - title: About
    url: /about
- - title: Contact
-   url: /contact
 
 social:
-   github: brianmaierjr
-   twitter: brianmaierjr
-   facebook: brianmaierjr
-   email: brimaidesigns@gmail.com
+   github: jongsoobae
+   facebook: ocpek2@naver.com
+   email: ocpek@nate.com
 
 google_analytics: "UA-58263416-1"
