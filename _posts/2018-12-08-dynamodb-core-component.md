@@ -8,9 +8,6 @@ date:   2018-12-08
 
 ## Dynamo DB Core Component
 
-### Dynamo DB란?
-nosql, no schema, no rdb
-
 ### table
 우리가 알던 table과 동일한 개념. User, Car 등.
 
