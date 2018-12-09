@@ -1,18 +1,18 @@
 ---
 layout: post
-title:  "Dynamo DB"
+title:  "Dynamo DB Core Component"
 date:   2018-12-08
 ---
 
 <sub>이 문서는 https://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/HowItWorks.html 를 요약한 내용아며, rdb 경험자 입장에서 작성 됨.</sub>
 
-## 핵심 구성요소
+## Dynamo DB Core Component
 
-### 다이나모 디비란?
+### Dynamo DB란?
 nosql, no schema, no rdb
 
 ### table
-우리가 알던 테이블과 동일한 개념. User, Car 등.
+우리가 알던 table과 동일한 개념. User, Car 등.
 
 ### items
 table row 라고 이해하면 됨. no limit.
@@ -27,7 +27,7 @@ table field 라고 이해하면 됨.
 Primary Key의 일종이며 단일 키
 
 #### Partition Key + Sort key
-Primary Key 복합 키로 구성 됨
+Primary Key의 일종이며 복합 키로 구성 됨
 
 <br />
 
@@ -46,3 +46,25 @@ Primary Key 복합 키로 구성 됨
 #### Partition Key
 내부적인 해시함수 param 으로 사용되며, 키 값에 따라 저장될 파티션을 결정함.
 ![그림](https://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/images/HowItWorksPartitionKey.png)
+
+### Secondary Indexes
+인덱스를 사용하여, primary key 제외한 다른 대체 키 쿼리 가능.  
+모든 인덱스는 테이블에 속하며, 이 테이블을 base table 이라 부름.  
+base table 의 값이 변하면 속한 모든 인덱스의 값도 변함.  
+<sub>https://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/SecondaryIndexes.html 를 더 읽어볼 것.</sub> 
+
+#### Global secondary index
+최대 5개까지 생성 가능.  
+인덱스가 테이블의 Partition key, sort Key 와 다를 수 있음.
+
+#### Local secondary index
+최대 5개까지 생성 가능.  
+인덱스가 테이블의 Partion key 와 동일. sort key 는 다름.
+
+### DynamoDB Streams
+일단 간단히... 테이블의 데이터가 변화하면 이를 캡쳐하는 일종의 저장소.  
+optional 한 기능.  
+table name, event timestamp, meta data 등으로 구성 됨.  
+24시간 동안 유효.  
+aws lambda 와 함께 기존 rdb 의 트리거를 구현 가능.  
+(이 말은 쉽게 이해가 됨. 스트림에 기록된 레코드를 중에 원하는 기능을 람다로 구현하면 될듯)  
