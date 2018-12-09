@@ -48,6 +48,7 @@ Primary Key의 일종이며 복합 키로 구성 됨
 ### Secondary Indexes
 인덱스를 사용하여, primary key 제외한 다른 대체 키 쿼리 가능.  
 모든 인덱스는 테이블에 속하며, 이 테이블을 base table 이라 부름.  
+(base table 의 검색용 별도 테이블이라고 이해해도 될듯?)  
 base table 의 값이 변하면 속한 모든 인덱스의 값도 변함.  
 <sub>https://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/SecondaryIndexes.html 를 더 읽어볼 것.</sub> 
 
