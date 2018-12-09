@@ -6,7 +6,7 @@ date:   2018-12-08
 
 <sub>이 문서는 https://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/HowItWorks.html 를 요약한 내용아며, rdb 경험자 입장에서 작성 됨.</sub>
 
-## Dynamo DB Core Component 및 명칭
+## Core Component 및 명칭
 ***
 
 ### table
