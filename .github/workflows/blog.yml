@@ -3,7 +3,7 @@ name: BLOG CI
 on:
   push:
     paths:
-      - *
+      - '*'
 jobs:
   build:
 
