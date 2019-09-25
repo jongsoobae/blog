@@ -1,6 +1,9 @@
 name: BLOG CI
 
-on: push
+on:
+  push:
+    paths:
+    - *
 jobs:
   build:
 
