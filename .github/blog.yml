@@ -4,9 +4,6 @@ on:
   push:
     paths:
       - '*'
-      - '**'
-      - '!doc/*'
-
 
 jobs:
   build:
